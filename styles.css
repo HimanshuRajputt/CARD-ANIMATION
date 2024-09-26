@@ -1,0 +1,95 @@
+body{
+    background-color: black;
+}
+
+h2{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,0.992) 2%, rgba(249,39,205,1) 73%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.container{
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-between;
+    margin: 12rem;
+    
+}
+
+.c1,.c2,.c3,.c4,.c5{
+    /* background-color: aliceblue; */
+    border:  1px solid black;
+    height: 12rem;
+    width: 10rem;
+    border-radius: 15px;
+    /* transition: opacity 0.3s ease; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    
+}
+
+.c1{
+    
+    background-color: rgb(216, 42, 123);
+}
+.c2{
+    
+    background-color: purple;
+}
+.c3{
+   
+    background-color: red;
+}
+.c4{
+   
+    background-color: teal;
+}
+.c5{
+    
+    background-color: orange;
+}
+
+
+.hover-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12rem;
+    width: 10rem;
+    border-radius: 36px;
+    object-fit: cover; /* Makes the image fit the card */
+    z-index: 0;
+}
+.container:hover .c1:not(:hover),
+.container:hover .c2:not(:hover),
+.container:hover .c3:not(:hover),
+.container:hover .c4:not(:hover),
+.container:hover .c5:not(:hover) {
+    opacity: 0.3;
+     /* Fades the unhovered cards */
+     
+}
+
+/* The hovered card remains fully visible */
+.c1:hover, .c2:hover, .c3:hover, .c4:hover, .c5:hover {
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border: 2px solid white;
+    transform: scale(1.2); /* Zoom effect: enlarges the card by 1.2x */
+    z-index: 1; /* Ensure the hovered card appears above the others */
+    border-radius: 40px;
+
+}
+
+
+.c1:hover .hover-image,
+.c2:hover .hover-image,
+.c3:hover .hover-image,
+.c4:hover .hover-image,
+.c5:hover .hover-image {
+    display: block;
+}
